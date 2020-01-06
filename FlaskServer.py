@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import WS2801_Controller
+import WS2801Controller
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ def home():
 
 @app.route('/power/')
 def power():
-    print("power")
+    WS2801Controller.WS2801Controller.console_test()
     return render_template('home.html')
 
 
