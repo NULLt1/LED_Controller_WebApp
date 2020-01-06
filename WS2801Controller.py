@@ -7,14 +7,17 @@ import Adafruit_WS2801
 import Adafruit_GPIO.SPI as SPI
 
 
-class Controller:
-    # Configure the count of pixels:
-    PIXEL_COUNT = 32
+class WS2801Controller:
+    def __init__(self):
+        self.PIXEL_COUNT = 160
+        self.SPI_PORT = 0
+        self.SPI_DEVICE = 0
+        self.pixels = Adafruit_WS2801.WS2801Pixels(self.PIXEL_COUNT, spi=SPI.SpiDev(self.SPI_PORT, self.SPI_DEVICE),
+                                                   gpio=GPIO)
 
-    # Alternatively specify a hardware SPI connection on /dev/spidev0.0:
-    SPI_PORT = 0
-    SPI_DEVICE = 0
-    pixels = Adafruit_WS2801.WS2801Pixels(PIXEL_COUNT, spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE), gpio=GPIO)
+    @staticmethod
+    def console_test():
+        print("Test")
 
     def appear_from_back(pixels, color=(255, 0, 0)):
         pos = 0
