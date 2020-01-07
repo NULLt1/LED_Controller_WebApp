@@ -17,11 +17,16 @@
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
             <h1 class="center">LED REMOTE APP</h1>
+            <p>{{ value }}</p>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
-            <button id="power">ON - OFF</button>
+            <div class="d-flex justify-content-center">
+                <button class="center" id="power">
+                    <img src="{{ url_for('static', filename='images/onoff.png') }}">
+                </button>
+            </div>
         </div>
     </div>
 </div>

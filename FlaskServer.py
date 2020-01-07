@@ -11,8 +11,10 @@ def home():
 
 @app.route('/power/')
 def power():
-    WS2801Controller.WS2801Controller.console_test()
-    return render_template('home.html')
+    print("power")
+    # WS2801Controller.WS2801Controller.console_test()
+    flag = False
+    return render_template('home.html', value=flag)
 
 
 if __name__ == "__main__":
