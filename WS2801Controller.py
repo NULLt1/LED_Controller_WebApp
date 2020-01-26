@@ -8,13 +8,12 @@ import Adafruit_GPIO.SPI as SPI
 
 
 class WS2801Controller:
-    def __init__(self):
-        self.PIXEL_COUNT = 160
-        self.SPI_PORT = 0
-        self.SPI_DEVICE = 0
-        self.power = False
-        self.pixels = Adafruit_WS2801.WS2801Pixels(self.PIXEL_COUNT, spi=SPI.SpiDev(self.SPI_PORT, self.SPI_DEVICE),
-                                                   gpio=GPIO)
+    PIXEL_COUNT = 160
+    SPI_PORT = 0
+    SPI_DEVICE = 0
+    powerFlag = False
+    pixels = Adafruit_WS2801.WS2801Pixels(PIXEL_COUNT, spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE),
+                                          gpio=GPIO)
 
     @staticmethod
     def change_color(self, color):
@@ -24,11 +23,11 @@ class WS2801Controller:
 
     @staticmethod
     def toggle_power():
-        WS2801Controller.power = not WS2801Controller.power
+        WS2801Controller.powerFlag = not WS2801Controller.powerFlag
 
     @staticmethod
     def power():
-        if not WS2801Controller.power:
+        if not WS2801Controller.powerFlag:
             WS2801Controller.change_color(WS2801Controller, color=(255, 0, 0))
             WS2801Controller.toggle_power()
         else:
