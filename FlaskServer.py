@@ -13,7 +13,7 @@ def home():
 def power():
     print("power")
     WS2801Controller.WS2801Controller.power()
-    return render_template('home.html', value= WS2801Controller.WS2801Controller.return_power())
+    return render_template('home.html', value= WS2801Controller.WS2801Controller.power)
 
 
 if __name__ == "__main__":

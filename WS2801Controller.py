@@ -23,12 +23,8 @@ class WS2801Controller:
             self.pixels.show()
 
     @staticmethod
-    def toggle_power(self):
-        self.power = not self.power
-
-    @staticmethod
-    def return_power(self):
-        return self.power
+    def toggle_power():
+        WS2801Controller.power = not WS2801Controller.power
 
     @staticmethod
     def power(self):
