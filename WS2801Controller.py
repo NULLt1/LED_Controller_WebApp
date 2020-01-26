@@ -27,10 +27,10 @@ class WS2801Controller:
         WS2801Controller.power = not WS2801Controller.power
 
     @staticmethod
-    def power(self):
-        if not self.power:
-            self.change_color(self, color=(255, 0, 0))
-            self.toggle_power()
+    def power():
+        if not WS2801Controller.power:
+            WS2801Controller.change_color(WS2801Controller, color=(255, 0, 0))
+            WS2801Controller.toggle_power()
         else:
-            self.pixels.clear()
-            self.toggle_power()
+            WS2801Controller.pixels.clear()
+            WS2801Controller.toggle_power()
