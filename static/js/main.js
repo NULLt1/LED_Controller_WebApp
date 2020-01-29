@@ -5,5 +5,6 @@ $("#power").on( "click", power );
         location.href = '/power/'
        }
 
-
+var value= $("powerValue").val;
+alert(value);
 });
