@@ -28,7 +28,7 @@ class WS2801Controller:
     @staticmethod
     def power():
         if not WS2801Controller.powerFlag:
-            WS2801Controller.change_color(WS2801Controller, color=(255, 0, 0))
+            WS2801Controller.change_color(WS2801Controller, color=(148, 0, 211))
             WS2801Controller.toggle_power()
         else:
             WS2801Controller.pixels.clear()
