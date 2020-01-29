@@ -19,7 +19,7 @@ class WS2801Controller:
     def change_color(self, color):
         for i in range(self.pixels.count()):
             self.pixels.set_pixel(i, Adafruit_WS2801.RGB_to_color(color[0], color[1], color[2]))
-            self.pixels.show()
+        self.pixels.show()
 
     @staticmethod
     def toggle_power():
@@ -28,7 +28,7 @@ class WS2801Controller:
     @staticmethod
     def power():
         if not WS2801Controller.powerFlag:
-            WS2801Controller.change_color(WS2801Controller, color=(85, 26, 139))
+            WS2801Controller.change_color(WS2801Controller, color=(255, 225, 255))
             WS2801Controller.toggle_power()
         else:
             WS2801Controller.pixels.clear()
