@@ -1,10 +1,10 @@
 $(function() {
 $("#power").on( "click", power );
 
-      function power() {
-        location.href = '/power/'
-       }
+function power() {
+    location.href = '/power/'
+}
 
-var value= $("powerValue").attr("value");
+var value= $("#powerValue").val();
 alert(value);
 });
