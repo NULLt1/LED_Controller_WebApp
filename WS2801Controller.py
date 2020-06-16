@@ -16,21 +16,26 @@ class WS2801Controller:
                                           gpio=GPIO)
 
     @staticmethod
-    def change_color(self, color):
+    def changeColor(color):
+        print(color)
+        WS2801Controller.applyColor(WS2801Controller, color=color)
+        
+    @staticmethod
+    def applyColor(self, color):
         for i in range(self.pixels.count()):
             self.pixels.set_pixel(i, Adafruit_WS2801.RGB_to_color(color[0], color[1], color[2]))
         self.pixels.show()
 
     @staticmethod
-    def toggle_power():
+    def togglePower():
         WS2801Controller.powerFlag = not WS2801Controller.powerFlag
 
     @staticmethod
     def power():
         if not WS2801Controller.powerFlag:
-            WS2801Controller.change_color(WS2801Controller, color=(204, 0, 204))
-            WS2801Controller.toggle_power()
+            WS2801Controller.applyColor(WS2801Controller, color=(204, 0, 204))
+            WS2801Controller.togglePower()
         else:
             WS2801Controller.pixels.clear()
             WS2801Controller.pixels.show()
-            WS2801Controller.toggle_power()
+            WS2801Controller.togglePower()

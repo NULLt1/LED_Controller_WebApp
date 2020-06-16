@@ -6,6 +6,10 @@ text-align: center;
 background:#9ad89a;
 }
 
+body{
+ background:#b51751;
+}
+
 #RGB {
 	height: 20px;
 	background: rgb(128, 128, 128);
