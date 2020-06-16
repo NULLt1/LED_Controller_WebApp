@@ -1,0 +1,19 @@
+$(function() {
+$("#power").on( "click", power );
+
+function power() {
+    location.href = '/power/'
+}
+
+$("button").on("click", log );
+
+function log() {
+    console.log("pew");
+}
+$("button[name ='color-button']").each(function( index ) {
+  console.log( index + ": " + $( this ).attr("red"));
+	$(this).css('background', 'rgb.css('background', 'rgb(255,220,200)'(255,220,200)'
+});
+
+
+});
