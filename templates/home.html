@@ -16,7 +16,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
-            <h1 class="center">LED REMOTE APP - Beta</h1>
+            <h1 class="center">LED REMOTE APP - Alpha</h1>
             <input id="powerValue" type="hidden" value="{{ value }}">
         </div>
     </div>
@@ -31,13 +31,15 @@
     </div> 
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
-	    <div class="d-flex justify-content-center">
-               <button name="color-button" red="204" green="0" blue="204">HTML</button>
-               <button name="color-button" red="255" green="0" blue="0">HTML</button>
-               <button name="color-button" red="0" green="255" blue="0">HTML</button>
-               <button name="color-button" red="0" green="0" blue="255">HTML</button>
-            </div>
-        </div>
+ 		<div class="row">
+			<button class="color-button" name="color-button" red="204" green="0" blue="204" ></button>           
+			<button class="color-button" name="color-button" red="255" green="0" blue="0" ></button>
+			<button class="color-button" name="color-button" red="0" green="255" blue="0" ></button>
+		</div>
+		<div class="row">
+			<button class="color-button" name="color-button" red="0" green="0" blue="255" ></button>
+		</div>        
+	</div>
     </div> 
 </div> 
 </body>

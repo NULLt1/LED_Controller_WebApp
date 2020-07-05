@@ -6,32 +6,27 @@ text-align: center;
 background:#9ad89a;
 }
 
-body{
- background:#b51751;
+.color-button{
+background-color: rgb(204, 0, 204);
+box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.75);
+border: none;
+height: 50px;
+width: 50px;
+margin: 3px;
+border-radius: 25px;
 }
 
-#RGB {
-	height: 20px;
-	background: rgb(128, 128, 128);
+#power{
+border-radius: 50px;
+width: 75px;
+height: 75px;
+border: none;
+border: 2px solid black;
+box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.75);
 }
-#RC .slider-selection {
-	background: #FF8282;
-}
-#RC .slider-handle {
-	background: red;
-}
-#GC .slider-selection {
-	background: #428041;
-}
-#GC .slider-handle {
-	background: green;
-}
-#BC .slider-selection {
-	background: #8283FF;
-}
-#BC .slider-handle {
-	border-bottom-color: blue;
-}
-#R, #G, #B {
-	width: 300px;
+
+#power img{
+height: 67px;
+width: 67px;
+margin: 0 0px 5px -5px;
 }
